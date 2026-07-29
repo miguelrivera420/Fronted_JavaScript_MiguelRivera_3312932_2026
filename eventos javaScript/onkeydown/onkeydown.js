@@ -1,0 +1,3 @@
+function capturarTecla(){
+    let campoProfesiondocument
+}

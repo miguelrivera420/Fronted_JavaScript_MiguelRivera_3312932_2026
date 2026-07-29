@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Registro de contacto</h1>
+            <p>Ingresa tu número celular para continuar</p>
+        </header>
+
+        <form onsubmit="return false;">
+            <label for="telefono">Número de teléfono</label>
+            <input
+            type="tel"
+            id="telefono"
+            placeholder="3013506533"
+            autocomplete="off"
+            >
+            <small id="mensaje"></small>
+        </form>
+    </main>
+
+    <script src="onblur.js"></script>
+</body>
+</html>
