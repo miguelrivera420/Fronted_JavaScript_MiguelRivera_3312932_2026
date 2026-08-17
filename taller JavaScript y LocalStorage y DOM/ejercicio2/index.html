@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Departamentos de una empresa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <h1>Registro de departamentos</h1>
+    <p>Guarda departamentos en tu navegador usando <code>localStorage</code></p>
+  </header>
+
+  <main class="container">
+
+
+    <section class="form-card">
+      <h2>Agregar departamento</h2>
+
+      <form id="form-departamento">
+        <div class="form-group">
+          <label for="nombre">Nombre del departamento</label>
+          <input type="text" id="nombre" placeholder="Ej: Sistemas" required>
+        </div>
+
+        <div class="form-group">
+          <label for="responsable">Responsable</label>
+          <input type="text" id="responsable" placeholder="Ej: Laura" required>
+        </div>
+
+        <div class="form-group">
+          <label for="empleados">Número de empleados</label>
+          <input type="number" id="empleados" placeholder="Ej: 10" min="0" required>
+        </div>
+
+        <div class="form-group">
+          <label for="ubicacion">Ubicación</label>
+          <input type="text" id="ubicacion" placeholder="Ej: Piso 2" required>
+        </div>
+
+        <div class="form-group">
+          <label for="imagen">URL de imagen representativa</label>
+          <input type="url" id="imagen" placeholder="https://..." required>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" id="btn-agregar">Agregar departamento</button>
+          <button type="button" id="btn-ver">Ver departamentos</button>
+        </div>
+      </form>
+
+      <p id="mensaje"></p>
+    </section>
+
+
+    <section class="tabla-wrapper">
+      <table id="tabla-departamentos">
+        <thead>
+          <tr>
+            <th>Imagen</th>
+            <th>Nombre</th>
+            <th>Responsable</th>
+            <th>Empleados</th>
+            <th>Ubicación</th>
+          </tr>
+        </thead>
+        <tbody id="cuerpo-tabla">
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <script src="index.js"></script>
+</body>
+</html>

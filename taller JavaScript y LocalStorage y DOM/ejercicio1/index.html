@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Países del mundo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <h1>Registro de países del mundo</h1>
+    <p>Guarda países </p>
+  </header>
+
+  <main class="container">
+
+
+    <section class="form-card">
+      <h2>Agregar país</h2>
+
+      <form id="form-pais">
+        <div class="form-group">
+          <label for="nombre">Nombre del país</label>
+          <input type="text" id="nombre" placeholder="Ej: Colombia" required>
+        </div>
+
+        <div class="form-group">
+          <label for="capital">Capital</label>
+          <input type="text" id="capital" placeholder="Ej: Bogotá" required>
+        </div>
+
+        <div class="form-group">
+          <label for="continente">Continente</label>
+          <select id="continente" >
+            <option value="América">América</option>
+            <option value="Europa">Europa</option>
+            <option value="Asia">Asia</option>
+            <option value="África">África</option>
+            <option value="Oceanía">Oceanía</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="idioma">Idioma</label>
+          <input type="text" id="idioma" placeholder="Ej: Español" required>
+        </div>
+
+        <div class="form-group">
+          <label for="bandera">URL de la bandera</label>
+          <input type="url" id="bandera" placeholder="https://..." >
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" id="btn-agregar">Agregar país</button>
+          <button type="button" id="btn-ver">Ver países</button>
+        </div>
+      </form>
+
+      <p id="mensaje"></p>
+    </section>
+
+    <section id="lista-paises" class="lista-paises"></section>
+
+  </main>
+
+  <script src="index.js"></script>
+</body>
+</html>
