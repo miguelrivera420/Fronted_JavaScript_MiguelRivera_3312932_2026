@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Laboratorio de experimentación - Selectores del DOM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1 id="titulo-principal">Laboratorio de selectores del DOM</h1>
+
+  <section id="parrafos">
+    <p class="texto">Este es el primer párrafo de prueba.</p>
+    <p class="texto destacado">Este párrafo tiene la clase "destacado" además de "texto".</p>
+    <p class="texto">Este es el tercer párrafo de prueba.</p>
+  </section>
+
+  <section id="imagenes">
+    <img class="imagen" src="https://via.placeholder.com/80" alt="Imagen 1" data-tipo="paisaje">
+    <img class="imagen" src="https://via.placeholder.com/80" alt="Imagen 2" data-tipo="retrato">
+    <img class="imagen destacada" src="https://via.placeholder.com/80" alt="Imagen 3" data-tipo="paisaje">
+  </section>
+
+  <section id="botones">
+    <button class="btn" id="btn-guardar">Guardar</button>
+    <button class="btn btn-peligro" id="btn-eliminar">Eliminar</button>
+    <button class="btn">Cancelar</button>
+  </section>
+
+  <div id="resultados">
+    <h2>Resultados de los experimentos</h2>
+    <pre id="salida">Presiona los botones de abajo para ejecutar cada experimento.</pre>
+  </div>
+
+  <section id="controles">
+    <button onclick="experimento1()">Experimento 1: elemento específico</button>
+    <button onclick="experimento2()">Experimento 2: varios por clase</button>
+    <button onclick="experimento3()">Experimento 3: todos por etiqueta</button>
+    <button onclick="experimento4()">Experimento 4: distintos selectores</button>
+    <button onclick="experimento5()">Experimento 5: más de una condición</button>
+  </section>
+
+  <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Reto práctico - Catálogo de videojuegos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1 id="titulo-catalogo">Catálogo de videojuegos</h1>
+
+  <div id="contenedor-juegos">
+    <div class="juego" id="juego-1" data-genero="accion">
+      <h3 class="nombre-juego">Shadow Blade</h3>
+      <p>Género: Acción</p>
+      <span class="precio">$45.000</span>
+      <button class="btn-detalle">Ver detalle</button>
+    </div>
+
+    <div class="juego destacado" id="juego-2" data-genero="rpg">
+      <h3 class="nombre-juego">Reino Perdido</h3>
+      <p>Género: RPG</p>
+      <span class="precio">$60.000</span>
+      <button class="btn-detalle">Ver detalle</button>
+    </div>
+
+    <div class="juego" id="juego-3" data-genero="deportes">
+      <h3 class="nombre-juego">Gol Total</h3>
+      <p>Género: Deportes</p>
+      <span class="precio">$35.000</span>
+      <button class="btn-detalle">Ver detalle</button>
+    </div>
+
+    <div class="juego destacado" id="juego-4" data-genero="accion">
+      <h3 class="nombre-juego">Cyber Strike</h3>
+      <p>Género: Acción</p>
+      <span class="precio">$50.000</span>
+      <button class="btn-detalle">Ver detalle</button>
+    </div>
+  </div>
+
+  <div id="panel-resultados">
+    <h2>Panel de pruebas del reto</h2>
+    <pre id="salida-reto">Presiona un botón para ejecutar la prueba correspondiente.</pre>
+  </div>
+
+  <section id="controles-reto">
+    <button onclick="encontrarEspecifico()">1. Encontrar un elemento específico</button>
+    <button onclick="encontrarVarios()">2. Encontrar varios elementos</button>
+    <button onclick="encontrarPorClase()">3. Encontrar elementos por clase</button>
+    <button onclick="encontrarPorEtiqueta()">4. Encontrar elementos por etiqueta</button>
+    <button onclick="seleccionEspecifica()">5. Selección más específica</button>
+  </section>
+
+  <script src="index.js"></script>
+</body>
+</html>
