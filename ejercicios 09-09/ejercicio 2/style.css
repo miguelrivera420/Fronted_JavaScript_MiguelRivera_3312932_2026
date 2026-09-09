@@ -1,0 +1,11 @@
+#contenedor {
+    width: 200px;
+    height: 100px;
+    margin-top: 20px;
+    background-color: red;
+}
+ 
+#contenedor.activo {
+    background-color: green;
+}
+ 
