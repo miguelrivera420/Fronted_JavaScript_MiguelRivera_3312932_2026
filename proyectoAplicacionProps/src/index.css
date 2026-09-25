@@ -1,0 +1,245 @@
+:root {
+  --amarillo: #ffd34e;
+  --amarillo-oscuro: #f2b705;
+  --gris-fondo: #f5f5f5;
+  --gris-borde: #e2e2e2;
+  --gris-texto: #6f6f6f;
+  --gris-oscuro: #3d3d3d;
+  --blanco: #ffffff;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--gris-fondo);
+  color: var(--gris-oscuro);
+}
+
+button { font-family: inherit; cursor: pointer; }
+
+/* ===== App ===== */
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+  width: 64px;
+  background: var(--amarillo);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 0;
+  gap: 28px;
+}
+
+.sidebar__menu {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 6px;
+  background: var(--blanco);
+  color: var(--gris-oscuro);
+  font-size: 16px;
+}
+
+.sidebar__nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+}
+
+.sidebar__item {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--gris-oscuro);
+  font-size: 18px;
+  transition: background 0.2s;
+}
+
+.sidebar__item:hover { background: rgba(0, 0, 0, 0.12); }
+
+.sidebar__item--activo { background: var(--amarillo-oscuro); }
+
+.sidebar__ajustes { margin-top: auto; }
+
+/* ===== Dashboard ===== */
+.dashboard {
+  flex: 1;
+  padding: 24px 28px;
+  min-width: 0;
+}
+
+.dashboard__encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.dashboard__titulo { font-size: 18px; color: var(--gris-texto); }
+
+.dashboard__buscador {
+  width: 200px;
+  padding: 8px 14px;
+  border: 1px solid var(--gris-borde);
+  border-radius: 20px;
+  background: var(--blanco);
+}
+
+.dashboard__pestanas {
+  display: flex;
+  gap: 24px;
+  margin: 20px 0;
+}
+
+.pestana {
+  padding-bottom: 4px;
+  border: none;
+  border-bottom: 3px solid transparent;
+  background: none;
+  color: var(--gris-texto);
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.pestana:hover { color: var(--gris-oscuro); }
+.pestana--activa { border-bottom-color: var(--amarillo); color: var(--gris-oscuro); }
+
+.dashboard__panel {
+  background: var(--blanco);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard__filtros {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.filtro {
+  padding-bottom: 3px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: none;
+  font-size: 13px;
+  color: var(--gris-texto);
+}
+
+.filtro:hover { color: var(--gris-oscuro); }
+.filtro--activo { border-bottom-color: var(--amarillo); color: var(--gris-oscuro); }
+
+.dashboard__tarjetas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+/* ===== Card ===== */
+.card {
+  position: relative;
+  background: var(--blanco);
+  border: 1px solid var(--gris-borde);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card--destacada { border: 2px solid var(--amarillo-oscuro); }
+
+.card__etiqueta {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: var(--amarillo);
+  color: var(--gris-oscuro);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.card__imagen {
+  display: block;
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  background: #e6e6e6;
+}
+
+.card__cuerpo { padding: 12px; }
+
+.card__categoria { font-size: 12px; color: var(--gris-texto); }
+
+.card__titulo { font-size: 15px; margin: 4px 0; }
+
+.card__descripcion { font-size: 13px; color: var(--gris-texto); }
+
+.card__pie {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.card__precio { font-size: 14px; }
+
+.card__estado {
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  background: var(--gris-borde);
+}
+
+.card__estado--disponible { background: #d9f2d9; color: #256b25; }
+.card__estado--ocupado { background: #fff0c2; color: #8a6300; }
+.card__estado--agotado { background: #f7d6d6; color: #8a2222; }
+
+/* ===== PanelDetalle ===== */
+.panel {
+  width: 260px;
+  padding: 24px 24px 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.panel__imagen {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 20px;
+  background: #e0e0e0;
+}
+
+.panel__titulo { font-size: 18px; margin-top: 8px; }
+.panel__categoria { color: var(--gris-texto); font-size: 13px; }
+.panel__estrellas { color: var(--amarillo-oscuro); letter-spacing: 2px; }
+.panel__texto { font-size: 13px; line-height: 1.5; color: var(--gris-texto); }
+
+.panel__boton {
+  margin-top: 12px;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: var(--amarillo);
+  color: var(--gris-oscuro);
+  font-weight: 700;
+  transition: background 0.2s;
+}
+
+.panel__boton:hover { background: var(--amarillo-oscuro); }
